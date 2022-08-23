@@ -1,38 +1,245 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir Next";
+  min-width: 1280px;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-family: "Avenir Next";
+  font-size: 56px;
+  font-weight: 400;
+  color: #0bc8b6;
+}
+
+h2,
+h3 {
+  font-family: "Lato";
+  color: #2b546a;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 8px;
+}
+
+h3 {
+  font-size: 20px;
+  border-bottom: 1px solid #e1e6ec;
+  line-height: 64px;
+  margin-bottom: 40px;
+}
+
+.header {
+  height: 80px;
+  border-bottom: 1px solid #eee;
+}
+
+.header-logo {
+  height: 90px;
+  width: 130px;
+  float: left;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-logo img {
+  opacity: 1;
+  width: 197px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-logo img:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-wrapper {
+  background-color: #cedadab3;
 }
 
-.App-link {
-  color: #61dafb;
+.header-button {
+  float: right;
+  margin-right: 120px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login {
+  float: right;
+  color: #5876a3;
+
+  font-size: 22px;
+  letter-spacing: 4px;
+  font-weight: 500;
+  display: block;
+  cursor: pointer;
+  padding: 5px 0px 0px 30px;
+}
+
+.main {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 96px 90px;
+}
+
+.copy-container p {
+  color: #5876a3;
+  line-height: 52px;
+  display: block;
+  text-align: left;
+  margin-top: 45px;
+  max-width: 950px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-inner {
+  position: absolute;
+  top: 8%;
+  right: 0;
+  left: 0;
+  width: 480px;
+  padding-bottom: 60px;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+
+.modal-header {
+  height: 8px;
+  width: 100%;
+  margin-bottom: 60px;
+  border-radius: 8px 8px 0 0;
+  background-image: url("https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/modal_bar.svg");
+}
+
+.modal-introduction p {
+  color: #5876a3;
+  width: 384px;
+  line-height: 32px;
+  text-align: left;
+  margin: 36px auto 40px;
+}
+
+.modal-close-btn {
+  font-size: 13px;
+  color: #8491a5;
+  width: 200px;
+  padding: 16px 0;
+  border: 0;
+  background-color: #f0f4f9;
+  cursor: pointer;
+}
+
+.modal-close-btn:hover {
+  color: #8491a5;
+  background-color: #ccd9ea;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-container {
+  margin-top: 96px;
+}
+
+.contact-form p {
+  color: #8491a5;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+.contact-form p.contact-message-error {
+  color: #ff4d75;
+  margin-top: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #8491a5;
+  width: 440px;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #bac6d3;
+  border-radius: 3px;
+  display: block;
+}
+
+.contact-form input {
+  height: 48px;
+}
+
+.contact-form textarea {
+  height: 184px;
+}
+
+.contact-form input[type="submit"] {
+  color: #fff;
+  width: 184px;
+  height: 48px;
+  font-size: 13px;
+  background-color: #30c8d6;
+  border: none;
+  margin-top: 32px;
+}
+
+.contact-form input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.contact-submit-message {
+  box-sizing: border-box;
+  color: #16a48a;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  font-size: 20px;
+  background-color: rgba(48, 214, 184, 0.16);
+  border: 2px solid #30d6b8;
+  border-radius: 3px;
+}
+
+.footer {
+  padding: 10px 20% 50px 30px;
+}
+
+.footer-inner {
+  margin: 0 auto;
+}
+
+.footer-logo {
+  display: inline-block;
+}
+
+.footer-logo img {
+  height: 45px;
+  float: left;
+  margin-top: 20px;
+}
+
+.footer-logo p {
+  color: #b1c0c0;
+  font-size: 14px;
+  padding-top: 50px;
+}
+
+.footer-inner ul {
+  float: right;
+  display: inline-block;
+}
+
+.footer-inner li {
+  color: #2b546a;
+  padding-bottom: 16px;
 }

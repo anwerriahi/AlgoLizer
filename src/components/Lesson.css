@@ -1,0 +1,59 @@
+.lesson-container {
+  margin-top: 70px;
+  text-align: center;
+  display: inline-block;
+}
+
+.lesson-card {
+  display: inline-block;
+  height: 250px;
+  width: 40%;
+  margin: 30px 30px;
+  box-shadow: 0 0 6px #505050;
+  background-color: rgb(245, 245, 245);
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 20px;
+  transition: 0.15s ease-in;
+}
+
+.lesson-card:hover {
+  transform: scale(1.02);
+}
+
+.lesson-item {
+  border-radius: 4px;
+  float: left;
+}
+
+img {
+  width: 180px;
+  height: 180px;
+}
+
+.lesson-item img {
+  width: 180px;
+  float: left;
+}
+
+.lessonTitle {
+  text-align: left;
+}
+
+.lesson-item p {
+  color: #2b546a;
+}
+
+.lesson-title {
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.lesson-content {
+  color: #5876a3;
+
+  font-size: 23px;
+  display: block;
+  text-align: left;
+  margin-top: 45px;
+}

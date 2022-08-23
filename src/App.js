@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import HomePage from "./components/HomePage"
+import "./App.css"
+// import Algorithms from "./components/Algorithms"
+import AlgorithmAnimation from "./components/AlgorithmAnimation"
+import SortingAlgorithms from "./components/SortingAlgorithms"
+import SearchingAlgorithms from "./components/SearchingAlgorithms"
+import NotFound from "./components/NotFound"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Route, Routes } from "react-router-dom"
+
+class App extends React.Component {
+  render() {
+    return (
+      <>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/algorithms/sort" element={<SortingAlgorithms />} />
+          <Route path="/algorithms/search" element={<SearchingAlgorithms />} />
+          <Route path="/algorithm_animation" element={<AlgorithmAnimation />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </>
+    )
+  }
 }
 
-export default App;
+export default App
